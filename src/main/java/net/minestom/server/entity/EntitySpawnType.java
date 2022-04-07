@@ -59,11 +59,7 @@ public enum EntitySpawnType {
             byte direction = 0;
             if (entity.getEntityMeta() instanceof PaintingMeta paintingMeta) {
                 motive = paintingMeta.getMotive().ordinal();
-                position = new Vec(
-                        Math.max(0, (paintingMeta.getMotive().getWidth() >> 1) - 1),
-                        paintingMeta.getMotive().getHeight() >> 1,
-                        0
-                );
+                position = paintingMeta.getPosition();
                 direction = switch (paintingMeta.getDirection()) {
                     case SOUTH -> 0;
                     case WEST -> 1;
