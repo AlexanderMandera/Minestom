@@ -49,6 +49,7 @@ public final class Cooldown {
      */
     public static boolean hasCooldown(long currentTime, long lastUpdate, @NotNull Duration duration) {
         final long cooldownMs = duration.toMillis();
+        if(cooldownMs == 0) return true;
         return currentTime - lastUpdate < cooldownMs;
     }
 
