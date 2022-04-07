@@ -59,7 +59,7 @@ public enum EntitySpawnType {
             byte direction = 0;
             if (entity.getEntityMeta() instanceof PaintingMeta paintingMeta) {
                 motive = paintingMeta.getMotive().ordinal();
-                position = paintingMeta.getPosition();
+                position = entity.getPosition();
                 direction = switch (paintingMeta.getDirection()) {
                     case SOUTH -> 0;
                     case WEST -> 1;

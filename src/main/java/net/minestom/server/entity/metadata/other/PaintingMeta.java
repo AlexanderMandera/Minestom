@@ -16,11 +16,9 @@ public class PaintingMeta extends EntityMeta {
 
     private Motive motive = Motive.KEBAB;
     private Direction direction = Direction.SOUTH;
-    private Pos position;
 
     public PaintingMeta(@NotNull Entity entity, @NotNull Metadata metadata) {
         super(entity, metadata);
-        this.position = entity.getPosition();
     }
 
     @NotNull
@@ -52,19 +50,6 @@ public class PaintingMeta extends EntityMeta {
     public void setDirection(@NotNull Direction direction) {
         Check.argCondition(direction == Direction.UP || direction == Direction.DOWN, "Painting can't look up or down!");
         this.direction = direction;
-    }
-
-    @NotNull
-    public Pos getPosition() {
-        return position;
-    }
-
-    /**
-     * Sets center position of a painting (with block coordinates)
-     * @param position position of a painting
-     */
-    public void setPosition(Pos position) {
-        this.position = position;
     }
 
     /*
