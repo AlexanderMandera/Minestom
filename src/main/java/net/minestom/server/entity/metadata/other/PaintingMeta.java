@@ -1,6 +1,5 @@
 package net.minestom.server.entity.metadata.other;
 
-import net.minestom.server.coordinate.Pos;
 import net.minestom.server.entity.Entity;
 import net.minestom.server.entity.Metadata;
 import net.minestom.server.entity.metadata.EntityMeta;
